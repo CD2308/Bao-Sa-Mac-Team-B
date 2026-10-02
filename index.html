@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10151c">
+<title>Bão Sa Mạc – Mẹo Thực Chiến Team B – TTYN 2308</title>
+<style>
+:root{
+  --bg:#0b0e12;--card:#151a21;--card2:#1b222b;--text:#f5f1e8;
+  --muted:#aeb6c0;--gold:#f6bd3a;--red:#ff5b52;--blue:#4aa3ff;
+  --green:#55d98b;--orange:#ff9b4a;--line:#2a323d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:radial-gradient(circle at 50% -10%,#38230d 0,#0b0e12 42%);
+  color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.65;
+}
+a{color:inherit}
+.container{width:min(1100px,92%);margin:auto}
+header{
+  padding:54px 0 42px;text-align:center;border-bottom:1px solid var(--line);
+}
+.badge{display:inline-block;padding:7px 13px;border:1px solid #6e531c;border-radius:999px;color:#ffd56a;background:#241b0c;font-size:13px;font-weight:800;letter-spacing:.5px}
+h1{font-size:clamp(32px,6vw,62px);line-height:1.05;margin:18px 0 12px}
+.hero-title{color:var(--gold)}
+.subtitle{color:var(--muted);max-width:760px;margin:auto;font-size:17px}
+nav{
+  position:sticky;top:0;z-index:10;background:rgba(11,14,18,.88);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+}
+.nav{display:flex;gap:8px;overflow:auto;padding:10px 0}
+.nav a{white-space:nowrap;text-decoration:none;padding:8px 12px;border-radius:9px;color:#cbd2da;font-size:14px}
+.nav a:hover{background:#202832;color:white}
+section{padding:42px 0}
+h2{font-size:30px;margin:0 0 8px}
+h3{font-size:19px;margin:0 0 8px}
+.lead{color:var(--muted);margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  background:linear-gradient(145deg,var(--card),#101419);border:1px solid var(--line);
+  border-radius:16px;padding:22px;box-shadow:0 8px 30px rgba(0,0,0,.16)
+}
+.card strong{color:white}
+.number{
+  width:34px;height:34px;display:grid;place-items:center;border-radius:10px;
+  background:#29200e;color:#ffd36a;font-weight:900;margin-bottom:12px
+}
+.callout{border-left:4px solid var(--gold);background:#18150f;padding:18px 20px;border-radius:10px;margin:18px 0}
+.danger{border-left-color:var(--red);background:#1b1112}
+.good{border-left-color:var(--green);background:#101b16}
+.blue{border-left-color:var(--blue);background:#101821}
+ul{padding-left:20px;margin-bottom:0}
+li{margin:7px 0}
+.roster{
+  background:#07090b;border:1px solid var(--line);border-radius:18px;padding:10px;
+}
+.roster img{display:block;width:100%;height:auto;border-radius:11px}
+.caption{text-align:center;color:var(--muted);font-size:13px;padding:10px 4px 2px}
+.steps{counter-reset:step}
+.step{position:relative;padding-left:58px;margin:18px 0}
+.step:before{
+  counter-increment:step;content:counter(step);position:absolute;left:0;top:0;
+  width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  background:#2a210f;color:#ffd56a;font-weight:900;border:1px solid #604a19
+}
+.bigquote{
+  font-size:clamp(21px,3vw,31px);font-weight:850;line-height:1.25;
+  text-align:center;padding:30px 18px;color:#ffe29a
+}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}
+th{color:#ffd56a}
+footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);text-align:center}
+@media(max-width:720px){
+ .grid,.grid3{grid-template-columns:1fr}
+ header{padding:42px 0 34px}
+ section{padding:32px 0}
+ .card{padding:18px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <span class="badge">⚔️ TTYN 2308 • TEAM B</span>
+    <h1><span class="hero-title">BÃO SA MẠC</span><br>Mẹo Thực Chiến Team B</h1>
+    <p class="subtitle">Cẩm nang giao tranh dành cho Team B — đánh có tính toán, bảo toàn quân, đọc chiến báo và tận dụng từng khoảng trống của đối phương.</p>
+  </div>
+</header>
+
+<nav>
+  <div class="container nav">
+    <a href="#roster">👥 Thành viên</a>
+    <a href="#nguyen-tac">🧠 Nguyên tắc</a>
+    <a href="#thuc-chien">⚔️ Thực chiến</a>
+    <a href="#thamdong">🔎 Thăm dò</a>
+    <a href="#quy-trinh">🚀 Quy trình</a>
+    <a href="#nhac">📢 Nhắc nhanh</a>
+  </div>
+</nav>
+
+<main class="container">
+
+<section id="roster">
+  <h2>👥 Đội hình Team B</h2>
+  <p class="lead">Danh sách thành viên và vị trí được phân công trong trận. Hãy kiểm tra đội hình trước khi vào chiến trường.</p>
+  <div class="roster">
+    <img src="team-b-roster.jpeg" alt="Danh sách thành viên Team B và bản đồ Bão Sa Mạc TTYN 2308">
+    <div class="caption">Danh sách thành viên tham gia Team B — TTYN 2308</div>
+  </div>
+</section>
+
+<section id="nguyen-tac">
+  <h2>🧠 Tư duy khi gặp đối thủ mạnh</h2>
+  <p class="lead">Mục tiêu không phải là cố giết bằng được nhà địch. Mục tiêu là giữ quân, thăm dò thực lực và khiến đối phương hao quân nhiều hơn mình.</p>
+  <div class="callout">
+    <strong>🏆 Nguyên tắc vàng:</strong> Không đánh người mạnh nhất của họ nếu không cần thiết. Hãy tìm người và đội hình ngang sức để trao đổi có lợi.
+  </div>
+  <div class="grid3">
+    <div class="card"><h3>🛡️ Giữ quân</h3><p>Bay nhà không đáng sợ. <strong>Hết lính mới đáng sợ.</strong> Đừng đốt quân vô nghĩa ngay từ đầu.</p></div>
+    <div class="card"><h3>👀 Đọc chiến báo</h3><p>Trước khi phản công, xem lực chiến, đội hình, tướng và thương vong của hai bên.</p></div>
+    <div class="card"><h3>🎯 Chọn mục tiêu</h3><p>Ăn được thì đánh. Không ăn được thì né, chuyển sang cứ điểm hoặc hỗ trợ đồng đội.</p></div>
+  </div>
+</section>
+
+<section id="thuc-chien">
+  <h2>⚔️ 10 mẹo giao tranh thực chiến</h2>
+
+  <div class="card step"><div class="number">1</div><h3>Gặp địch mạnh → TẮT THỦ THÀNH</h3>
+    <p>Khi xác định đối phương mạnh hơn, tắt thủ thành để tránh bị đốt sạch quân trong căn cứ.</p>
+    <div class="callout danger"><strong>🚨 Nhớ:</strong> Nếu cần, để nhà bị bay → Teleport lại → tiếp tục chiến đấu. Đừng để trận chiến mới vài phút đã “hết lính”.</div>
+  </div>
+
+  <div class="card step"><div class="number">2</div><h3>Đừng vội đánh — hãy đọc chiến báo</h3>
+    <ul><li>Đội 1 của địch bao nhiêu lực chiến?</li><li>Đội hình và tướng nào?</li><li>Tỉ lệ thương vong hai bên?</li><li>Đó là đội chính hay đội phụ?</li></ul>
+    <div class="callout good"><strong>Ví dụ:</strong> Địch đưa đội 12M đánh bạn. Nếu chiến báo cho thấy bạn vẫn chịu được và không bị nghiền nát → chưa cần chạy, tiếp tục quan sát.</div>
+  </div>
+
+  <div class="card step"><div class="number">3</div><h3>Địch đưa đội chính ra ngoài → kiểm tra nhà</h3>
+    <p>Nếu đội mạnh nhất đang hành quân bên ngoài, hãy kiểm tra căn cứ: nhà còn đội mạnh bảo vệ không?</p>
+    <div class="callout blue"><strong>⚡ Cơ hội:</strong> Đội chính rời nhà → căn cứ yếu → có thể đánh thẳng vào nhà nếu thực lực cho phép.</div>
+  </div>
+
+  <div class="card step"><div class="number">4</div><h3>Địch có 3–4 đội hành quân → THĂM DÒ</h3>
+    <p>Dùng một đội có tướng cấp thấp / lực chiến thấp để kiểm tra. Mục đích không phải thắng mà là biết nhà đối phương có thủ hay không và thực lực phòng thủ.</p>
+    <p>Nếu nhà không có thủ → tận dụng cơ hội. Nếu có thủ → dừng lại, đọc chiến báo, không lao đội chính vào mù quáng.</p>
+  </div>
+
+  <div class="card step"><div class="number">5</div><h3>Nhìn đội hình hành quân để đoán đội chính</h3>
+    <p>Hãy ghi nhớ hình dạng đội hình mạnh nhất của từng đối thủ. Khi thấy biểu tượng đội hình đó xuất hiện trên bản đồ, coi như đội chính đang xuất chinh.</p>
+  </div>
+
+  <div class="card step"><div class="number">6</div><h3>Địch giấu đội mạnh trong nhà → ĐỪNG CỐ ĐÁNH NHÀ</h3>
+    <p>Bạn có thể ăn đội 2, đội 3, đội 4 nhưng nếu đội mạnh nhất vẫn nằm trong căn cứ và bạn chưa xử lý được nó:</p>
+    <div class="callout danger"><strong>❌ Bỏ ý định đánh nhà.</strong> Đừng đổi cả đội chính lấy một lần tấn công vô nghĩa.</div>
+  </div>
+
+  <div class="card step"><div class="number">7</div><h3>Không ăn được đội chính → CHIẾM CỨ ĐIỂM</h3>
+    <p>Dùng lợi thế cơ động để chiếm công trình, giữ cứ điểm và hỗ trợ đồng đội. Đối thủ mạnh không có nghĩa là bạn phải đứng yên.</p>
+  </div>
+
+  <div class="card step"><div class="number">8</div><h3>Đừng cố “ăn nhà” — hãy làm địch hao quân</h3>
+    <p>Ưu tiên <strong>ăn đội yếu → né đội mạnh → giữ quân → chiếm cứ điểm → ép địch phải giao tranh.</strong></p>
+  </div>
+
+  <div class="card step"><div class="number">9</div><h3>Không đánh được → chuyển mục tiêu ngay</h3>
+    <p>Nếu khu vực có đối thủ quá mạnh: Teleport / di chuyển sang khu vực khác. Tìm đội yếu hơn, cứ điểm trống, đồng đội cần hỗ trợ hoặc công trình đang yếu phòng thủ.</p>
+  </div>
+
+  <div class="card step"><div class="number">10</div><h3>BÁO CÁO THỰC LỰC ĐỊCH</h3>
+    <p>Phát hiện đối thủ mạnh thì chia sẻ ngay trên kênh chat:</p>
+    <ul><li>📍 Vị trí</li><li>⚔️ Lực chiến</li><li>👥 Đội hình</li><li>🚨 Có thủ nhà hay không</li></ul>
+    <p>Nhờ vậy cả team biết ai cần né, ai có thể đánh và khu vực nào cần hỗ trợ.</p>
+  </div>
+</section>
+
+<section id="thamdong">
+  <h2>🔎 Ví dụ đọc tình huống</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Trường hợp A — Địch đưa đội 12M</h3>
+      <p>Chiến báo cho thấy đội của bạn vẫn chịu được.</p>
+      <p><strong>→ Không hoảng. Không chạy ngay. Tiếp tục quan sát.</strong></p>
+    </div>
+    <div class="card">
+      <h3>Trường hợp B — Địch đưa đội chính 13M</h3>
+      <p>Bạn không đánh nổi đội chính nhưng thấy nhà địch không còn lực lượng mạnh.</p>
+      <p><strong>→ Kiểm tra nhà và tận dụng khoảng trống.</strong></p>
+    </div>
+    <div class="card">
+      <h3>Trường hợp C — Đội chính vẫn nằm trong nhà</h3>
+      <p>Bạn chỉ ăn được đội phụ.</p>
+      <p><strong>→ Không cố nhà. Chuyển sang cứ điểm và hỗ trợ đồng đội.</strong></p>
+    </div>
+    <div class="card">
+      <h3>Trường hợp D — Khu vực quá mạnh</h3>
+      <p>Chiến báo liên tục bất lợi.</p>
+      <p><strong>→ Rút, đổi mục tiêu, tìm nơi có lợi thế hơn.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="quy-trinh">
+  <h2>🚀 Quy trình 6 bước — nhớ là đánh được</h2>
+  <div class="grid3">
+    <div class="card"><h3>① TẮT THỦ</h3><p>Không để địch đốt sạch quân trong nhà.</p></div>
+    <div class="card"><h3>② THĂM DÒ</h3><p>Xem đội 1 của địch mạnh đến đâu.</p></div>
+    <div class="card"><h3>③ PHÂN LOẠI</h3><p>Ăn được → đánh. Không ăn được → né.</p></div>
+    <div class="card"><h3>④ SĂN ĐỘI PHỤ</h3><p>Đánh đội 2, 3, 4 nếu có thể thắng.</p></div>
+    <div class="card"><h3>⑤ DỤ ĐỊCH</h3><p>Khi đội chính rời nhà → kiểm tra và đánh căn cứ nếu có cơ hội.</p></div>
+    <div class="card"><h3>⑥ KHÔNG CỐ</h3><p>Địch giữ đội mạnh trong nhà → bỏ nhà, đánh cứ điểm và hỗ trợ team.</p></div>
+  </div>
+</section>
+
+<section id="nhac">
+  <h2>📢 Nhắc nhanh trước khi giao tranh</h2>
+  <div class="bigquote">“Đánh người ngang sức — né người quá mạnh — bảo toàn quân — tạo áp lực liên tục.”</div>
+  <div class="callout">
+    <strong>⚔️ Bão Sa Mạc không phải cuộc thi xem ai chết quân nhanh hơn.</strong><br>
+    Người giữ được quân đến cuối trận mới còn khả năng chiến đấu khi trận đấu thực sự quyết định.
+  </div>
+  <div class="callout blue">
+    <strong>TEAM B — TTYN 2308</strong><br>
+    Luôn báo vị trí • Báo lực chiến • Báo đội hình • Hỗ trợ nhau • Không lao vào chết vô nghĩa.
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">⚔️ BÃO SA MẠC • MẸO THỰC CHIẾN TEAM B • TTYN 2308</div>
+</footer>
+</body>
+</html>
